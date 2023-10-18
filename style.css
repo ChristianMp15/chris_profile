@@ -3,16 +3,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins' , sans-serif;
-    
+    font-family: 'poppins' , sans-serif;    
 }
 body
 {
-    color: #ededed;
+    color: lightcyan;
 }
 .header
 {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -45,7 +44,6 @@ body
     transition: .3s;
     opacity: 0;
     animation: slideTop .5s ease forwards;
-
 }
 .navbar a:hover
 {
@@ -54,7 +52,7 @@ body
 }
 #menu-icon{
     font-size: 3.6rem;
-    color: var(--text-color);
+    color: #0ef;
     display: none;
 }
 .home
@@ -153,11 +151,7 @@ body
     background-color:lightcyan;
     
 }
-.about-img img{
-    width: 65%;
-    border-radius: 25px;
-    margin: 25px 25px 15px;
-}
+
 .heading{
     margin: 5rem;
     text-align: left;
@@ -167,19 +161,56 @@ body
 .heading span{
     color: #0ef;
 }
-.about-content h2{
-    text-align: center;
-    line-height: 1.2;
-    color: #081b29;
+.about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: lightcyan;
 }
-.about-content p{
-    font-size: 16px;
-    text-align: center;
-    margin: 3rem 10rem 5rem;
-    color: #081b29;
+.about img{
+    height: auto;
+    width: 430px;
+    border-radius: 25px;
+    margin: 25px 25px 15px;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight .50s ease forwards;
 }
+.about-text{
+    width: 750px;
+    color: #081b29;
+    cursor: default;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-text h2{
+    color:#081b29;
+    font-size: 75px;
+    text-transform: capitalize;      
+}
+.about-text span{
+    color: #0ef;
+}
+.about-text h5{
+    color:navy;
+    font-size:small;
+    margin-bottom: 25px;
+}
+.about-text a{
+    text-decoration: none;
+    color: #0ef;
+}
+
 .services{
     background-color: lightcyan;
+    background-size: cover;
 }
 .services h2{
     margin-bottom: 5rem;
@@ -213,6 +244,52 @@ body
     text-decoration: none;
     font-weight: 600;
 }
+.contact{
+    background-color: lightcyan;
+}
+.contact h2{
+    margin-bottom: 3rem;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #0ef;
+    background: #081b29;
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contact form .input-box input{
+    width: 49%;
+}
+.contact form textarea{
+    resize: none;
+}
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+    display: inline-block;
+    padding: 12px 50px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
